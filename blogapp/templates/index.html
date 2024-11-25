@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>BLOG</title>
+        {% load static %}
+        <link rel="stylesheet" href="{%static 'css/style.css'%}"/>
+    </head>
+    <body>
+        <form method="post" class="post-form" action="/blg">
+            {% csrf_token %}
+            <div class="container">
+                <div class="col-md-7 offset-md-3 mt-15 ">  
+        <br>
+             <div class="form-group row">
+                <label class="col-md-4 offset-md-1 mt-3 col-form-label"></label> 
+                <div class="col-md-4">
+                    <h3> BLOG APP</h3>    
+                </div>
+            </div>
+            {{form.as_p}}
+            <div class="form-group row">
+                <label class-"col-sm-1 col-form-label"></label>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
